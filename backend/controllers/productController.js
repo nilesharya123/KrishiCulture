@@ -34,7 +34,7 @@ const createProduct = async (req, res) => {
             category,
             stock,
             image: imageUrl,
-            seller: req.user._id // From authMiddleware
+            seller: req.user.id // From authMiddleware
         });
 
         const createdProduct = await product.save();

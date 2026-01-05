@@ -17,7 +17,7 @@ const productSchema = new mongoose.Schema({
     image: String,
     seller: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'Farmer' // Or a separate Vendor schema if needed, assuming Farmer for peer-to-peer for now
+        ref: 'User' // Correctly referencing User model
     },
     stock: {
         type: Number,

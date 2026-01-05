@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const commentSchema = new mongoose.Schema({
     user: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'Farmer'
+        ref: 'User'
     },
     text: String,
     date: {
@@ -15,7 +15,7 @@ const commentSchema = new mongoose.Schema({
 const communityPostSchema = new mongoose.Schema({
     author: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'Farmer',
+        ref: 'User',
         required: true
     },
     content: {
@@ -25,7 +25,7 @@ const communityPostSchema = new mongoose.Schema({
     image: String,
     likes: [{
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'Farmer'
+        ref: 'User'
     }],
     comments: [commentSchema],
     tags: [String], // e.g. 'PestControl', 'Advice'

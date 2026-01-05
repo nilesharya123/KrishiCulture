@@ -43,9 +43,9 @@ const MarketplaceCommunity = () => {
                         <p className="text-gray-600 truncate">Sharing my success with drip irrigation...</p>
                     </div>
                 </div>
-                <button className="mt-4 w-full text-center text-krishi-green border border-krishi-green rounded-lg py-2 hover:bg-green-50">
+                <Link to="/community" className="mt-4 block w-full text-center text-krishi-green border border-krishi-green rounded-lg py-2 hover:bg-green-50">
                     Join Discussion
-                </button>
+                </Link>
             </div>
         </div>
     );

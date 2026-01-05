@@ -11,6 +11,7 @@ dotenv.config();
 // Passport Config
 require('./config/passport');
 const productRoutes = require('./routes/productRoutes');
+const communityRoutes = require('./routes/communityRoutes');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -37,6 +38,7 @@ mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost:27017/krishicultu
 // Routes
 app.use('/auth', authRoutes);
 app.use('/api/products', productRoutes);
+app.use('/api/community', communityRoutes);
 // app.use('/api/ai', aiRoutes);
 // app.use('/api/farmers', farmerRoutes);
 
